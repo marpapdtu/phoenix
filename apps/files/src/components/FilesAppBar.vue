@@ -81,7 +81,7 @@
             </oc-drop>
           </template>
         </template>
-        <div v-if="selectedResourcesAmount > 0" class="uk-margin-small-right">
+        <div v-if="selectedResourcesAmount > 0" class="uk-margin-small-right uk-visible@l">
           <translate
             v-if="selectedResourcesSize !== '?'"
             key="multiple-select-info"
