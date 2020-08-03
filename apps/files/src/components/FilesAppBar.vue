@@ -115,7 +115,7 @@
             class="uk-margin-small-right"
             @click="$_ocTrashbin_restoreFiles()"
           >
-            <translate>Restore selected</translate>
+            <translate>Restore</translate>
           </oc-button>
           <oc-button
             id="delete-selected-btn"
@@ -137,7 +137,7 @@
               icon="delete"
               @click="$_deleteResources_displayDialog()"
             >
-              <translate>Delete selected</translate>
+              <translate>Delete</translate>
             </oc-button>
           </div>
           <div>
@@ -148,7 +148,7 @@
               :disabled="!canMove"
               @click.native="triggerLocationPicker('move')"
             >
-              <translate>Move selected</translate>
+              <translate>Move</translate>
             </oc-button>
           </div>
           <div>
@@ -159,7 +159,7 @@
               :disabled="!canCopy"
               @click.native="triggerLocationPicker('copy')"
             >
-              <translate>Copy selected</translate>
+              <translate>Copy</translate>
             </oc-button>
           </div>
         </oc-grid>
@@ -252,7 +252,7 @@ export default {
     $_ocAppBar_clearTrashbinButtonText() {
       return this.selectedFiles.length < 1
         ? this.$gettext('Empty trash bin')
-        : this.$gettext('Delete selected')
+        : this.$gettext('Delete')
     },
 
     showBreadcrumb() {
