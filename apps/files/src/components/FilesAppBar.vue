@@ -81,7 +81,10 @@
             </oc-drop>
           </template>
         </template>
-        <div v-if="selectedResourcesAmount > 0" class="uk-margin-small-right uk-visible@l">
+        <div
+          v-if="selectedResourcesAmount > 0"
+          class="uk-margin-small-right uk-visible@l uk-flex uk-flex-middle"
+        >
           <translate
             v-if="selectedResourcesSize !== '?'"
             key="multiple-select-info"
@@ -89,7 +92,6 @@
             :translate-params="{ amount: selectedResourcesAmount, size: selectedResourcesSize }"
             translate-plural="%{ amount } selected items - %{ size }"
             translate-comment="Number of selected resources and their size displayed above the files list"
-            class="uk-margin-xsmall-right"
             >%{ amount } selected item - %{ size }</translate
           >
           <translate
@@ -99,11 +101,10 @@
             :translate-params="{ amount: selectedResourcesAmount }"
             translate-plural="%{ amount } selected items"
             translate-comment="Number of selected resources displayed above the files list"
-            class="uk-margin-xsmall-right"
             >%{ amount } selected item</translate
           >
-          |
-          <oc-button variation="raw" class="uk-margin-xsmall-left" @click="resetFileSelection"
+          <span class="uk-margin-small-left uk-margin-small-right">|</span>
+          <oc-button variation="raw" @click="resetFileSelection"
             ><translate>Clear selection</translate></oc-button
           >
         </div>

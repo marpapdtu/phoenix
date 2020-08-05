@@ -797,7 +797,7 @@ module.exports = {
       locateStrategy: 'xpath'
     },
     restoreSelectedButton: {
-      selector: '//span[contains(text(),"Restore selected")]',
+      selector: '//span[contains(text(),"Restore")]',
       locateStrategy: 'xpath'
     },
     linkToPublicLinksTag: {
